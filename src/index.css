@@ -26,6 +26,11 @@ button {
 	align-items: stretch;
 	justify-content: flex-start;
 }
+@media (max-width: 500px) {
+	#root {			
+		padding: 10px;		
+	}
+}
 
 /****** Main *****/
 
@@ -41,7 +46,6 @@ button {
 .todoAdd-container .btn {
 	margin-left: 5px;
 }
-
 .search-container .btn.active {
 	background: #ffc107;
 }
@@ -60,6 +64,25 @@ button {
 .search-input:focus,
 .addToDo-input:focus {
 	border: 2px solid #ffc107;
+}
+
+@media (max-width: 500px) {
+	.search-container {
+		flex-wrap: wrap;
+		justify-content: center;
+		row-gap: 20px;
+	}
+	.search-container button {
+		width: 82px;
+		height: 40px;
+	}
+	.search-container .search-input {
+		margin: 0;
+	}
+	.search-container .btn {
+	margin: 5px;
+	width: 90px;
+}
 }
 
 /*** ToDo ***/
@@ -110,4 +133,13 @@ button {
 	align-items: center;
 	justify-content: flex-start;
 	margin-top: 40px;
+}
+
+@media (max-width: 500px) {
+	.todo-list {
+		padding: 10px 0;		
+	}
+	.todoAdd-container {		
+		margin-top: 20px;
+	}
 }

@@ -10,10 +10,10 @@ class App extends Component {
 		todoData: localStorage.dataArr
 			? JSON.parse(localStorage.dataArr)
 			: [
-					{ todo: 'Drink cofee', important: false, done: false, key: 0 },
-					{ todo: 'Learn React', important: true, done: false, key: 1 },
-					{ todo: 'Use TypeScript', important: true, done: false, key: 2 },
-			  ],
+				{ todo: 'Drink cofee', important: false, done: false, key: 0 },
+				{ todo: 'Learn React', important: true, done: false, key: 1 },
+				{ todo: 'Use TypeScript', important: true, done: false, key: 2 },
+			],
 		addToDoInputValue: '',
 		searchToDoInputValue: '',
 		todoFilterStatus: 'All',
@@ -42,11 +42,11 @@ class App extends Component {
 		e.preventDefault();
 		const newToDoTitle = this.state.addToDoInputValue
 			? this.state.addToDoInputValue
-					.toLowerCase()
-					.trim()
-					.split('')
-					.map((item, idx) => (idx === 0 ? item.toUpperCase() : item))
-					.join('')
+				.toLowerCase()
+				.trim()
+				.split('')
+				.map((item, idx) => (idx === 0 ? item.toUpperCase() : item))
+				.join('')
 			: 'My new todo';
 		const newToDoArr = [...Array.from(this.state.todoData), { todo: newToDoTitle, important: false, done: false, key: Date.now() }];
 
@@ -56,7 +56,7 @@ class App extends Component {
 			};
 		});
 		this.setState({
-			addToDoInputValue: 'new todo',
+			addToDoInputValue: '',
 		});
 	};
 
